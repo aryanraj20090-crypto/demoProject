@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface ExamService {
     ExamResponseDTO createExamAccount (ExamRequestDTO examRequestDTO);
-    ExamResponseDTO getByExamination (String exams);
+    ExamResponseDTO getByExamination (Integer examId);
     List<ExamResponseDTO> getAllExams();
-    ExamResponseDTO updateExams (ExamRequestDTO examRequestDTO);
-    void deleteExamAccountByExamination (String exams);
+    ExamResponseDTO updateExams (Integer examId, ExamRequestDTO examRequestDTO);
+    void deleteExamAccountByExamId(Integer examId);
 }

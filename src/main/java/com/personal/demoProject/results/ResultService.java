@@ -9,6 +9,6 @@ public interface ResultService {
     ResultResponseDTO createResultSheet (ResultRequestDTO resultRequestDTO);
     ResultResponseDTO getResultByResultId (Integer resultId);
     List<ResultResponseDTO> getAllResult();
-    ResultResponseDTO updateResultSheet (ResultRequestDTO resultRequestDTO);
+    ResultResponseDTO updateResultSheet (Integer resultId, ResultRequestDTO resultRequestDTO);
     void deleteResultSheetByResultId (Integer resultId);
 }

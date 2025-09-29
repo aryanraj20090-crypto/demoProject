@@ -74,5 +74,10 @@ public class StudentServiceImpl implements StudentService{
     @Override
     public void deleteStudentAccountByRollNumber(Integer rollNumber) {
 
+        Optional<StudentEntity> studentEntity = _studentRepo.findByRollNumber(rollNumber);
+        if (studentEntity.isEmpty() || studentEntity==null){
+            throw new EntityNotFoundException("NO Student Find By Roll Number");
+        }
+        _studentRepo.delete(studentEntity.get());
     }
 }

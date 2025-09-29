@@ -22,7 +22,7 @@ public class StudentEntity {
     @Column(name = "ad_dress")
     private  String address;
     @Column(name = "phone_No")
-    private Integer phoneNo;
+    private Long phoneNo;
     @Column(name = "guardian_Name")
     private String guardianName; // use (FK)
     @Column(name = "email_Id")

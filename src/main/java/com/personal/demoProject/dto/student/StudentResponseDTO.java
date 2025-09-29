@@ -5,10 +5,11 @@ import lombok.Data;
 @Data
 public class StudentResponseDTO {
 
+    private Integer rollNumber;
     private String firstName;
     private String lastName;
     private  String address;
-    private Integer phoneNo;
+    private Long phoneNo;
     private String guardianName; // use (FK)
     private String emailId;
 }
