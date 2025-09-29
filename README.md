@@ -14,6 +14,8 @@
 
        Spring Batch
 
+       Maven
+
        MySQL Database
 
        AWS
