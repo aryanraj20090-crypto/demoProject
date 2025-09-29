@@ -9,6 +9,6 @@ public interface FeesService {
     FeesResponseDTO createFeesAccount (FeesRequestDTO feesRequestDTO);
     FeesResponseDTO getByFeesId (Integer feesId);
     List<FeesResponseDTO> getAllFees();
-    FeesResponseDTO updateFeesAccount (FeesRequestDTO feesRequestDTO);
+    FeesResponseDTO updateFeesAccount (Integer feesId, FeesRequestDTO feesRequestDTO);
     void deleteFeesAccountByFeesId (Integer feesId);
 }

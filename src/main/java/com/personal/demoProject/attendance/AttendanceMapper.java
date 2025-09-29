@@ -14,7 +14,7 @@ public class AttendanceMapper {
 
     public AttendanceEntity dtoToEntity(AttendanceRequestDTO attendanceRequestDTO, AttendanceEntity attendanceEntity){
 
-        attendanceEntity.setAttendance(attendanceRequestDTO.getAttendance());
+//        attendanceEntity.setAttendanceId(attendanceRequestDTO.getAttendanceId());
         attendanceEntity.setStudentId(attendanceRequestDTO.getStudentId());
         attendanceEntity.setDate(attendanceRequestDTO.getDate());
         attendanceEntity.setStatus(attendanceRequestDTO.getStatus());
@@ -27,7 +27,7 @@ public class AttendanceMapper {
 
         AttendanceResponseDTO attendanceResponseDTO = new AttendanceResponseDTO();
 
-        attendanceResponseDTO.setAttendance(attendanceEntity.getAttendance());
+        attendanceResponseDTO.setAttendanceId(attendanceEntity.getAttendanceId());
         attendanceResponseDTO.setStudentId(attendanceEntity.getStudentId());
         attendanceResponseDTO.setDate(attendanceEntity.getDate());
         attendanceResponseDTO.setStatus(attendanceEntity.getStatus());

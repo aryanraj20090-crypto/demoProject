@@ -6,9 +6,9 @@ import com.personal.demoProject.dto.subject.SubjectResponseDTO;
 import java.util.List;
 
 public interface SubjectService {
-    SubjectResponseDTO createSubject (SubjectRequestDTO subjectRequestDTO);
-    SubjectResponseDTO getSubjectBySubjectName (String SubName);
+    SubjectResponseDTO createSubjectAccount(SubjectRequestDTO subjectRequestDTO);
+    SubjectResponseDTO getSubjectBySubjectId(Integer subjectId);
     List<SubjectResponseDTO> getAllSubject();
-    SubjectResponseDTO updateSubject (SubjectRequestDTO subjectRequestDTO);
-    void deleteSubjectBySubjectName (String subName);
+    SubjectResponseDTO updateSubject (Integer subjectId, SubjectRequestDTO subjectRequestDTO);
+    void deleteSubjectBySubjectId(Integer subjectId);
 }

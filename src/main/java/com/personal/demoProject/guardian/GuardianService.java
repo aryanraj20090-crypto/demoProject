@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface GuardianService {
     GuardianResponseDTO createGuardianAccount (GuardianRequestDTO guardianRequestDTO);
-    GuardianResponseDTO getGuardiansByName (String guardian);
+    GuardianResponseDTO getGuardiansByGuardianId(Integer guardianId);
     List<GuardianResponseDTO> getAllGuardian();
-    GuardianResponseDTO UpdateGuardianAccount(GuardianRequestDTO guardianRequestDTO);
-    void deleteGuardianAccountByGuardianName (String guardian);
+    GuardianResponseDTO UpdateGuardianAccount(Integer guardianId, GuardianRequestDTO guardianRequestDTO);
+    void deleteGuardianAccountByGuardianId(Integer guardianId);
 }

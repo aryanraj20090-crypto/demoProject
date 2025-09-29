@@ -9,6 +9,6 @@ public interface ClassesService {
     ClassesResponseDTO createClassRoom (ClassesRequestDTO classesRequestDTO);
     ClassesResponseDTO getByClassName (Integer classRoom);
     List<ClassesResponseDTO> getAllClassRoom ();
-    ClassesResponseDTO updateClassRooms (ClassesRequestDTO classesRequestDTO);
-    public void deleteClassRoomById(Integer id);
+    ClassesResponseDTO updateClassRooms (Integer classId, ClassesRequestDTO classesRequestDTO);
+    void deleteClassId(Integer classId);
 }
