@@ -13,7 +13,7 @@ public class ClassesMapper {
 
     public ClassesEntity dtoToEntity(ClassesRequestDTO classesRequestDTO, ClassesEntity classesEntity){
 
-        classesEntity.setId(classesRequestDTO.getId());
+        classesEntity.setClassId(classesRequestDTO.getClassId());
         classesEntity.setClassName(classesRequestDTO.getClassName());
         classesEntity.setSection(classesRequestDTO.getSection());
 
@@ -23,7 +23,7 @@ public class ClassesMapper {
     public ClassesResponseDTO entityToDto(ClassesEntity classesEntity){
 
         ClassesResponseDTO classesResponseDTO = new ClassesResponseDTO();
-        classesResponseDTO.setId(classesEntity.getId());
+        classesResponseDTO.setClassId(classesEntity.getClassId());
         classesResponseDTO.setClassName(classesEntity.getClassName());
         classesResponseDTO.setSection(classesEntity.getSection());
 

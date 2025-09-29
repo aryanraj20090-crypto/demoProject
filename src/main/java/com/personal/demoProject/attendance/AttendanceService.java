@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface AttendanceService {
     AttendanceResponseDTO createAttendanceSheet (AttendanceRequestDTO attendanceRequestDTO);
-    AttendanceResponseDTO getByAttendance (Integer attendance);
+    AttendanceResponseDTO getByAttendance (Integer attendanceId);
     List<AttendanceResponseDTO> getAllAttendance();
-    AttendanceResponseDTO updateAttendance (AttendanceRequestDTO attendanceRequestDTO);
-    void deleteAttendanceSheetByAttendance(Integer attendance);
+    AttendanceResponseDTO updateAttendance (Integer attendanceId, AttendanceRequestDTO attendanceRequestDTO);
+    void deleteAttendanceSheetByAttendanceId(Integer attendanceId);
 }

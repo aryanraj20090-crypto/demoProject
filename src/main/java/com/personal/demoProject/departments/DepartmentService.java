@@ -1,13 +1,14 @@
 package com.personal.demoProject.departments;
 
+import com.personal.demoProject.dto.department.DepartmentRequestDTO;
 import com.personal.demoProject.dto.department.DepartmentResponseDTO;
 
 import java.util.List;
 
 public interface DepartmentService {
-    DepartmentResponseDTO createDepartmentOffice (DepartmentResponseDTO departmentResponseDTO);
-    DepartmentResponseDTO getByDepartment (String department);
+    DepartmentResponseDTO createDepartmentOffice (DepartmentRequestDTO departmentRequestDTO);
+    DepartmentResponseDTO getByDepartment (Integer deptId);
     List<DepartmentResponseDTO> getAllDepartment();
-    DepartmentResponseDTO updateDepartment(DepartmentResponseDTO departmentResponseDTO);
-    void deleteDepartmentOfficeByDepartment (String department);
+    DepartmentResponseDTO updateDepartment(Integer deptId, DepartmentRequestDTO departmentRequestDTO);
+    void deleteDepartmentOfficeByDepartmentId(Integer deptId);
 }

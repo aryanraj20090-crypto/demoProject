@@ -7,7 +7,7 @@ public class StudentRequestDTO {
     private String firstName;
     private String lastName;
     private  String address;
-    private Integer phoneNo;
+    private Long phoneNo;
     private String guardianName; // use (FK)
     private String emailId;
 }

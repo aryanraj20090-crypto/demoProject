@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.javapoet.ClassName;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,7 +14,7 @@ public class ClassesEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "class_id")
-    private Integer id;
+    private Integer classId;
     @Column(name= "class_name")
     private String ClassName;
     @Column(name = "section")
