@@ -33,7 +33,7 @@ public class StudentMapper {
 
         StudentResponseDTO studentResponseDTO = new StudentResponseDTO();
 
-        studentResponseDTO.setRollNumber(studentEntity.getRollNumber());
+        studentResponseDTO.setStudentId(studentEntity.getStudentId());
         studentResponseDTO.setFirstName(studentEntity.getFirstName());
         studentResponseDTO.setLastName(studentEntity.getLastName());
         studentResponseDTO.setAddress(studentEntity.getAddress());

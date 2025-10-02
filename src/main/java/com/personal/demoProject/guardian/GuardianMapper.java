@@ -15,7 +15,7 @@ public class GuardianMapper {
     public GuardianEntity dtoToEntity(GuardianRequestDTO guardianRequestDTO, GuardianEntity guardianEntity){
         guardianEntity.setGuardianId(guardianRequestDTO.getGuardianId());
         guardianEntity.setGuardianName(guardianRequestDTO.getGuardianName());
-        guardianEntity.setStudentName(guardianRequestDTO.getStudentName());
+        guardianEntity.setStudentId(guardianRequestDTO.getStudentId());
         guardianEntity.setGuardianRelationship(guardianRequestDTO.getGuardianRelationship());
         guardianEntity.setGuardianPhoneNo(guardianRequestDTO.getGuardianPhoneNo());
         guardianEntity.setGuardianEmail(guardianRequestDTO.getGuardianEmail());
@@ -28,7 +28,7 @@ public class GuardianMapper {
         GuardianResponseDTO guardianResponseDTO = new GuardianResponseDTO();
         guardianResponseDTO.setGuardianId(guardianEntity.getGuardianId());
         guardianResponseDTO.setGuardianName(guardianEntity.getGuardianName());
-        guardianResponseDTO.setStudentName(guardianEntity.getStudentName());
+        guardianResponseDTO.setStudentId(guardianEntity.getStudentId());
         guardianResponseDTO.setGuardianRelationship(guardianEntity.getGuardianRelationship());
         guardianResponseDTO.setGuardianPhoneNo(guardianEntity.getGuardianPhoneNo());
         guardianResponseDTO.setGuardianEmail(guardianEntity.getGuardianEmail());

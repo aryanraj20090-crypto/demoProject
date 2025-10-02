@@ -39,8 +39,8 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public StudentResponseDTO getStudentByRollNumber(Integer rollNumber) {
-        Optional<StudentEntity> studentEntity = _studentRepo.findByRollNumber(rollNumber);
+    public StudentResponseDTO getStudentByStudentId(Integer studentId) {
+        Optional<StudentEntity> studentEntity = _studentRepo.findByStudentId(studentId);
         if (studentEntity.isEmpty() || studentEntity == null){
 
             throw new EntityNotFoundException("No Student found for given roll number");
@@ -59,8 +59,8 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public StudentResponseDTO updateStudentAccount(Integer rollNumber, StudentRequestDTO studentRequestDTO) {
-        Optional<StudentEntity> studentEntity = _studentRepo.findByRollNumber(rollNumber);
+    public StudentResponseDTO updateStudentAccount(Integer studentId, StudentRequestDTO studentRequestDTO) {
+        Optional<StudentEntity> studentEntity = _studentRepo.findByStudentId(studentId);
         if (studentEntity.isEmpty() || studentEntity==null){
             throw new EntityNotFoundException("NO Student Find By Roll Number");
         }
@@ -72,9 +72,9 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public void deleteStudentAccountByRollNumber(Integer rollNumber) {
+    public void deleteStudentAccountByStudentId(Integer studentId) {
 
-        Optional<StudentEntity> studentEntity = _studentRepo.findByRollNumber(rollNumber);
+        Optional<StudentEntity> studentEntity = _studentRepo.findByStudentId(studentId);
         if (studentEntity.isEmpty() || studentEntity==null){
             throw new EntityNotFoundException("NO Student Find By Roll Number");
         }

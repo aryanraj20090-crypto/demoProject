@@ -8,7 +8,7 @@ import java.util.Date;
 public class FeesRequestDTO {
 
     private Integer feesId;
-    private Integer studentRollNo;// use (FK)
+    private Integer studentId;// use (FK)
     private Double amount;
     private Date dueDate;
     private String feesStatus;

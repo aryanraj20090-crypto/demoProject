@@ -17,8 +17,8 @@ public class FeesEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "fees_id")
     private Integer feesId;
-    @Column(name = "student_rollNo")
-    private Integer studentRollNo;// use (FK)
+    @Column(name = "student_id")
+    private Integer studentId;// use (FK)
     @Column(name = "amount")
     private Double amount;
     @Column(name = "due_date")
