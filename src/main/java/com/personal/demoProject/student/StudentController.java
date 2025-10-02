@@ -29,12 +29,12 @@ public class StudentController {
         return studentAccount;
     }
 
-    @GetMapping("/{rollNumber}")
-    public StudentResponseDTO getStudentAccountByRollNumber(@PathVariable ("rollNumber") Integer rollNumber){
+    @GetMapping("/{studentId}")
+    public StudentResponseDTO getStudentAccountByStudentId(@PathVariable ("studentId") Integer studentId){
 
-        StudentResponseDTO studentByRollNumber = _StudentService.getStudentByRollNumber(rollNumber);
+        StudentResponseDTO studentByStudentId = _StudentService.getStudentByStudentId(studentId);
 
-        return studentByRollNumber;
+        return studentByStudentId;
     }
 
     @GetMapping("/all")
@@ -42,15 +42,15 @@ public class StudentController {
         List<StudentResponseDTO> allStudent = _StudentService.getAllStudent();
         return allStudent;
     }
-    @PutMapping("/{rollNumber}")
-    public StudentResponseDTO updateStudentAccount(@PathVariable("rollNumber") Integer rollNumber, StudentRequestDTO studentRequestDTO){
+    @PutMapping("/{studentId}")
+    public StudentResponseDTO updateStudentAccount(@PathVariable("studentId") Integer rollNumber, StudentRequestDTO studentRequestDTO){
         StudentResponseDTO studentResponseDTO = _StudentService.updateStudentAccount(rollNumber, studentRequestDTO);
         return studentResponseDTO;
     }
 
-    @DeleteMapping("/{rollNumber}")
-    public ResponseEntity<Void> deleteStudentAccountByRollNumber(@PathVariable("rollNumber") Integer rollNumber){
-        _StudentService.deleteStudentAccountByRollNumber(rollNumber);
+    @DeleteMapping("/{studentId}")
+    public ResponseEntity<Void> deleteStudentAccountByRollNumber(@PathVariable("studentId") Integer studentId){
+        _StudentService.deleteStudentAccountByStudentId(studentId);
         return ResponseEntity.noContent().build();
     }
 }

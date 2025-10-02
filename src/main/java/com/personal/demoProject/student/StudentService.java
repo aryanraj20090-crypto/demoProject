@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface StudentService {
     StudentResponseDTO createStudentAccount(StudentRequestDTO studentRequestDTO);
-    StudentResponseDTO getStudentByRollNumber(Integer rollNumber);
+    StudentResponseDTO getStudentByStudentId(Integer studentId);
     List<StudentResponseDTO> getAllStudent();
-    StudentResponseDTO updateStudentAccount(Integer rollNumber, StudentRequestDTO studentRequestDTO);
-    void deleteStudentAccountByRollNumber(Integer rollNumber);
+    StudentResponseDTO updateStudentAccount(Integer studentId, StudentRequestDTO studentRequestDTO);
+    void deleteStudentAccountByStudentId(Integer studentId);
 
 }

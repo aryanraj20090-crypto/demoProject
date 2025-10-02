@@ -1,5 +1,6 @@
 package com.personal.demoProject.dto.guardian;
 
+import com.personal.demoProject.student.StudentEntity;
 import lombok.Data;
 
 @Data
@@ -7,7 +8,7 @@ public class GuardianRequestDTO {
 
     private Integer guardianId;
     private String guardianName;
-    private String studentName; // use (PK)
+    private StudentEntity studentId; // use (PK)
     private String guardianRelationship;
     private Integer guardianPhoneNo;
     private String guardianEmail;
