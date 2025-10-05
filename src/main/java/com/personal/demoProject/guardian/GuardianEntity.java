@@ -1,6 +1,7 @@
 package com.personal.demoProject.guardian;
 
 
+import com.personal.demoProject.student.StudentEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,11 +17,12 @@ public class GuardianEntity {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name = "guardian_id")
-    private Integer guardianId;
-    @Column(name = "guardian_name")
+    private Integer guardianId; // use (PK)
+    @Column (name = "guardian_name")
     private String guardianName;
-    @Column(name = "student_name")
-    private String studentName; // use (PK)
+    @ManyToOne (cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+    @JoinColumn (name = "student_id")
+    private StudentEntity studentId; // use (FK)
     @Column(name = "guardian_relationship")
     private String guardianRelationship;
     @Column(name = "guardian_phoneNo")

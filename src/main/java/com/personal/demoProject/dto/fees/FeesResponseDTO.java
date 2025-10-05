@@ -1,6 +1,5 @@
 package com.personal.demoProject.dto.fees;
 
-import jakarta.persistence.Column;
 import lombok.Data;
 
 import java.util.Date;
@@ -9,7 +8,7 @@ import java.util.Date;
 public class FeesResponseDTO {
 
     private Integer feesId;
-    private Integer studentRollNo;// use (FK)
+    private Integer studentId;// use (FK)
     private Double amount;
     private Date dueDate;
     private String feesStatus;

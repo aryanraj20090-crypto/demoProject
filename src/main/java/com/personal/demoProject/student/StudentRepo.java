@@ -8,6 +8,6 @@ import java.util.Optional;
 @Repository
 public interface StudentRepo extends JpaRepository <StudentEntity ,Integer > {
 
-     Optional<StudentEntity> findByRollNumber(Integer rollNumber);
+     Optional<StudentEntity> findByStudentId(Integer studentId);
 
 }
